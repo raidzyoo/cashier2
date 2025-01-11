@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const kembalian = parseFloat(localStorage.getItem('kembalian')) || 0;
     let totalHarga = parseFloat(localStorage.getItem('totalHarga')) || 0;
     const namaPemesan = localStorage.getItem('namaPemesan');
-    const nomorMeja = localStorage.getItem('nomorMeja');
+    const Kelas = localStorage.getItem('nomorMeja');
 
     // Menampilkan informasi pemesan di atas detail pesanan
     const infoPemesan = document.createElement('div');
