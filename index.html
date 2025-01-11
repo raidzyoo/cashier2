@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Makanan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="stars-container"></div>
+    <header class="header">
+        <h1>Pemesanan Makanan</h1>
+        <p>Pilih menu favorit Anda dan nikmati!</p>
+    </header>
+
+    <main class="menu-container">
+        <div class="menu-item" id="menu-nasi-goreng">
+            <img src="https://assets.unileversolutions.com/recipes-v2/242794.jpg" alt="Nasi Goreng" class="food-image">
+            <a href="detail-makanan.html?id=nasi-goreng"><h2>Nasi Goreng</h2></a>
+            <p>Harga: Rp20.000</p>
+            <label for="nominal-nasi-goreng">Jumlah:</label>
+            <input type="number" id="nominal-nasi-goreng" min="0" value="0" required oninput="resizeInput(this)">
+        </div>
+        <div class="menu-item" id="menu-mie-ayam">
+             <img src="https://kurio-img.kurioapps.com/21/12/01/c0002ce2-2ee1-4f6e-aa6a-ac6aa9387e01.jpe" alt="Mie Ayam" class="food-image">
+             <h2><a href="detail-makanan.html?id=mie-ayam">Mie Ayam</a></h2>
+             <p>Harga: Rp15.000</p>
+             <label for="nominal-mie-ayam">Jumlah:</label>
+             <input type="number" id="nominal-mie-ayam" min="0" value="0" required oninput="resizeInput(this)">
+         </div>
+         <div class="menu-item" id="menu-ayam-bakar">
+             <img src="https://kurio-img.kurioapps.com/21/12/13/4b216ab9-72c4-491f-8eb7-c463f5bc6d43.jpe" alt="Ayam Bakar" class="food-image">
+             <h2><a href="detail-makanan.html?id=ayam-bakar">Ayam Bakar</a></h2>
+             <p>Harga: Rp25.000</p>
+             <label for="nominal-ayam-bakar">Jumlah:</label>
+             <input type="number" id="nominal-ayam-bakar" min="0" value="0" required oninput="resizeInput(this)">
+         </div>
+         <div class="menu-item" id="menu-es-teh">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr42zinHkcmw-8fHMUQbShTOuR4tHjZpPAmg&s" alt="Es Teh" class="food-image">
+             <h2><a href="detail-makanan.html?id=es-teh">Es Teh</a></h2>
+             <p>Harga: Rp5.000</p>
+             <label for="nominal-es-teh">Jumlah:</label>
+             <input type="number" id="nominal-es-teh" min="0" value="0" required oninput="resizeInput(this)">
+         </div>
+         <div class="menu-item" id="menu-jus-alpukat">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy2T_pRM3RRbSSBrLuaTiJqZ88R02O96ygKQ&s" alt="Jus Alpukat" class="food-image">
+             <h2><a href="detail-makanan.html?id=jus-alpukat">Jus Alpukat</a></h2>
+             <p>Harga: Rp15.000</p>
+             <label for="nominal-jus-alpukat">Jumlah:</label>
+             <input type="number" id="nominal-jus-alpukat" min="0" value="0" required oninput="resizeInput(this)">
+         </div>
+    </main>
+
+    <div id="customer-info">
+        <label for="nama-pemesan">Nama Pemesan:</label>
+        <input type="text" id="nama-pemesan" required>
+        <label for="nomor-meja">Nomor Meja:</label>
+        <input type="number" id="nomor-meja" min="1" required>
+    </div>
+
+    <button onclick="kumpulkanPesanan()">Pesan Semua</button>
+
+    <div id="payment-section" style="display: none;">
+      <h3>Pembayaran</h3>
+      <label for="uang-dibayar">Uang Dibayar (Rp):</label>
+      <input type="number" id="uang-dibayar" min="0" value="0">
+      <p id="total-harga-text">Total Harga: Rp0</p>
+      <p id="kembalian-text"></p>
+      <button onclick="hitungKembalian()">Hitung Kembalian</button>
+      <button id="konfirmasi-kirim-btn" onclick="konfirmasiDanKirim()">Konfirmasi dan Kirim</button>
+      <button onclick="resetForm()">Reset</button>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; RaidAselole. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="wallpaper.js"></script>
+</body>
+</html>

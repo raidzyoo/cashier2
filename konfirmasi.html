@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfirmasi Pesanan</title>
+    <link rel="stylesheet" href="style-konfirmasi.css">
+    <link rel="stylesheet" href="wallpaper.css">
+</head>
+<body>
+    <div id="stars-container"></div>
+
+    <header class="header">
+        <h1>Konfirmasi Pesanan</h1>
+    </header>
+
+    <main>
+        <div class="confirmation-container">
+            <div id="customer-details">
+                </div>
+            <div id="detailPesanan">
+                </div>
+            <div id="payment-details">
+                <h3>Detail Pembayaran</h3>
+                <p>Uang Dibayar: Rp<span id="uang-dibayar-display"></span></p>
+                <p>Total Harga: Rp<span id="total-harga-display"></span></p>
+                <p>Kembalian: Rp<span id="kembalian-display"></span></p>
+            </div>
+        </div>
+        <button onclick="kirimKeDiscord()">Kirim ke Discord</button>
+        <button onclick="window.location.href='index.html'">Kembali ke Menu</button>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Warung Makan Online. All rights reserved.</p>
+    </footer>
+
+    <script src="script-konfirmasi.js"></script>
+    <script src="wallpaper.js"></script>
+</body>
+</html>

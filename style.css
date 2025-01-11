@@ -1,0 +1,286 @@
+/* Import CSS untuk wallpaper */
+@import url("wallpaper.css");
+
+/* Gaya Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Import font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Font utama */
+    background-color: #000; /* Background hitam untuk wallpaper bintang */
+    color: #222; /* Warna teks utama */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden; /* Prevent horizontal scroll due to stars */
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(135deg, #0077cc, #0099ff); /* Gradasi biru */
+    color: #fff;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.header p {
+    font-size: 1.1rem;
+}
+
+/* Daftar Menu */
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.menu-item {
+    background: transparent;
+    border-radius: 15px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); */
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+}
+
+/* Gambar Makanan */
+.food-image {
+    width: 100%; /* Gambar mengisi lebar container */
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.menu-item h2 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #eee;
+}
+
+/* Style untuk label dan input nominal */
+.menu-item label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff
+}
+
+.menu-item input[type="number"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: auto;
+    min-width: 3ch;
+    max-width: 8ch; /* Batasi lebar di desktop */
+}
+
+/* Style untuk form input nama dan nomor meja */
+#customer-info {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left; /* Rata kiri */
+    width: 80%; /* Lebar form */
+    max-width: 500px; /* Lebar maksimum form */
+}
+
+#customer-info label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff; /* Warna label */
+    font-weight: bold;
+}
+
+#customer-info input[type="text"],
+#customer-info input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Tombol Pesan */
+button {
+    padding: 8px 15px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff9900; /* Warna oranye */
+    border: none;
+    border-radius: 20px; /* Sudut lebih melengkung */
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffcc66;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Style untuk bagian pembayaran */
+#payment-section {
+    border: 2px solid #0077cc;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.95); /* Menambahkan background */
+}
+
+#payment-section h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#payment-section label {
+    color: #333;
+    display: block;
+    margin-top: 10px;
+}
+
+#payment-section input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#payment-section #kembalian-text {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+#payment-section #total-harga-text{
+   color: #333;
+}
+
+#payment-section button {
+    margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .menu-container {
+        gap: 15px;
+    }
+
+    .menu-item {
+        width: calc(50% - 15px); /* Dua item per baris */
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .menu-item h2 {
+        font-size: 1.1rem;
+    }
+
+    .menu-item p {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+
+    /* Gambar makanan */
+    .food-image {
+        height: 140px;
+    }
+
+    .menu-item input[type="number"] {
+        min-width: 4ch;
+        max-width: 6ch; /* Batasi lebar di tablet */
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .header p {
+        font-size: 0.9rem;
+    }
+
+    .menu-item {
+        width: 100%; /* Satu item per baris */
+        padding: 10px;
+    }
+
+    .menu-item h2 {
+        font-size: 1rem;
+    }
+
+    .menu-item p {
+        font-size: 0.8rem;
+    }
+
+    .menu-item button {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    /* Gambar makanan */
+    .food-image {
+        height: 120px;
+    }
+
+    .menu-item input[type="number"] {
+        min-width: 5ch;
+        max-width: 5ch; /* Batasi lebar di mobile */
+    }
+}
